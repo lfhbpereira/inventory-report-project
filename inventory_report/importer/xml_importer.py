@@ -9,6 +9,6 @@ class XmlImporter(Importer):
             with open(path) as file:
                 data = xmltodict.parse(file.read())["dataset"]["record"]
 
-                return list(data)
+                return data
 
         raise ValueError("Arquivo inválido")
